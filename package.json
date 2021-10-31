@@ -1,0 +1,59 @@
+{
+  "name": "@googlesites/statpixel",
+  "version": "2.0.0",
+  "description": "",
+  "main": "./dist/shard.js",
+  "scripts": {
+    "test": "jest --verbose ./test",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage && jest-coverage-badges",
+    "start": "npx tsc && node --trace-warnings ./dist/shard.js",
+    "prettier": "npx prettier --write src/**/*.ts",
+    "lint": "tslint src/**/*.ts",
+    "lint:fix": "tslint src/**/*.ts --fix",
+    "format": "npm run lint:fix && npm run prettier"
+  },
+  "authors": [
+    "GoogleSites"
+  ],
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/googlesites/statpixel.git"
+  },
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "module",
+      "parser": "typescript"
+    }
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.6.20",
+    "@types/node": "^16.3.1",
+    "@types/node-cache": "^4.2.5",
+    "import-sort-style-module": "^6.0.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-import-sort": "0.0.7",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "canvas": "2.8.0",
+    "chart.js": "^3.4.1",
+    "chartjs-adapter-dayjs-3": "^1.2.3",
+    "chartjs-node-canvas": "^3.2.0",
+    "cron-parser": "^3.5.0",
+    "dayjs": "^1.10.4",
+    "discord.js-light": "4.0.5",
+    "fast-sort": "^3.0.2",
+    "fastify": "^3.19.1",
+    "fastify-cors": "^6.0.1",
+    "hypixel-api-v2": "1.3.5",
+    "mongodb": "^3.6.10",
+    "node-cache": "^5.1.2",
+    "node-cron": "^3.0.0",
+    "polynomial-regression": "https://github.com/GoogleSites/polynomial-regression.git",
+    "string-similarity": "^4.0.4",
+    "uuid": "^8.3.2"
+  }
+}
